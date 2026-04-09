@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+        }
+
+
+        .about {
+            background: #fff;
+            padding: 20px;
+            max-width: 350px;
+            margin: 20px auto;
+            border-radius: 6px;
+        }
+
+        .about h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 180px;
+        }
+
+        #more-text {
+            display: none;
+        }
+
+        .text-box {
+            position: relative;
+            max-height: 80px;
+            overflow: hidden;
+        }
+
+        a {
+            cursor: pointer;
+            color: rgb(44, 44, 253);
+            text-decoration: underline;
+        }
+
+        .fade {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+            background: linear-gradient(to bottom, transparent, #fff);
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .follow {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            width: 35px;
+            height: 35px;
+            background: #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .social-icons a:hover {
+            background: linear-gradient(rgb(128, 128, 246), pink);
+            color: white;
+        }
+
+        .footer-bottom img {
+            width: 80px;
+            margin-bottom: 5px;
+        }
+
+        .footer-bottom p {
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="about">
+        <h2>About Us</h2>
+
+        <div class="logo">
+            <img src="data:image/png;base64,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"
+                alt="Contour Software">
+        </div>
+        <div class="text-box" id="textBox">
+            <p>
+                As a subsidiary of CSI, Contour Software serves as a dedicated Global Centre,
+                currently housing employees and teams for more than 150 Divisional and Corporate
+                departments.
+
+                <span id="more-text">
+                    Contour employees are key players in implementing, supporting, and enhancing
+                    software solutions across multiple industries worldwide.
+                </span>
+            </p>
+
+            <div class="fade" id="fade"></div>
+        </div>
+
+        <a class="read-more" onclick="toggleText()" id="">
+            Read More <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+
+        <footer>
+            <p class="follow">Follow Us</p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                <img src="data:image/jpeg;base64,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"
+                    alt="Workday">
+                <p>© 2026 Workday, Inc. All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            function toggleText() {
+                var moreText = document.getElementById("more-text");
+                var btn = document.getElementById("btn");
+                var fade = document.getElementById("fade");
+                var box = document.getElementById("textBox");
+
+                if (moreText.style.display === "none") {
+                    moreText.style.display = "inline";
+                    fade.style.display = "none";
+                    box.style.maxHeight = "none";
+                    btn.innerHTML = 'Read Less <i class="fa-solid fa-chevron-up"></i>';
+                } else {
+                    moreText.style.display = "none";
+                    fade.style.display = "block";
+                    box.style.maxHeight = "80px";
+                    btn.innerHTML = 'Read More <i class="fa-solid fa-chevron-down"></i>';
+                }
+            }
+        </script>
+</body>
+
+</html>
