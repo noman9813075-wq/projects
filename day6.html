@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+
+        .contact-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-top {
+            height: 100px;
+            position: relative;
+            padding: 15px;
+            color: white;
+        }
+
+        .avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .badge-default {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .card-body p {
+            margin: 0;
+            color: #777;
+        }
+
+        .actions {
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .btn-call {
+            background: #e6f4ea;
+            color: green;
+             
+        }
+
+        .btn-text {
+            background: #e7efff;
+            color: #3b82f6;
+        }
+
+        .icon-btn { 
+            border: none;
+            background: none;
+            color: #999;
+        }
+         
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <div class="row g-4">
+ 
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <div class="card-top" style="background: linear-gradient(45deg,#a18cd1,#6a5af9);">
+                        <div class="avatar">SM</div>
+                        <div class="badge-default">Default</div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5>Sarah Mitchell</h5>
+                        <p>Boss</p>
+                        <p>(555) 234-8901</p>
+
+                        <div class="actions d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <button class="btn btn-sm btn-call me-2"><i class="fa-solid fa-phone"></i> Call</button>
+                                <button class="btn btn-sm btn-text"><i class="fa-solid fa-comment"></i> Text</button>
+                            </div>
+                            <div>
+                                <button class="icon-btn"><i class="fa-regular fa-star"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-pen"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-trash"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <div class="card-top" style="background: linear-gradient(45deg,#ff758c,#ff3e6c);">
+                        <div class="avatar">MO</div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5>Mom</h5>
+                        <p>Family</p>
+                        <p>(555) 111-2233</p>
+
+                        <div class="actions d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <button class="btn btn-sm btn-call me-2"><i class="fa-solid fa-phone"></i> Call</button>
+                                <button class="btn btn-sm btn-text"><i class="fa-solid fa-comment"></i> Text</button>
+                            </div>
+                            <div>
+                                <button class="icon-btn"><i class="fa-regular fa-star"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-pen"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-trash"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <div class="card-top" style="background: linear-gradient(45deg,#36d1dc,#5b86e5);">
+                        <div class="avatar">JR</div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5>Jake Rivera</h5>
+                        <p>Roommate</p>
+                        <p>(555) 445-6677</p>
+
+                        <div class="actions d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <button class="btn btn-sm btn-call me-2"><i class="fa-solid fa-phone"></i> Call</button>
+                                <button class="btn btn-sm btn-text"><i class="fa-solid fa-comment"></i> Text</button>
+                            </div>
+                            <div>
+                                <button class="icon-btn"><i class="fa-regular fa-star"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-pen"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-trash"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row g-4 mt-1">
+
+
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <div class="card-top" style="background: linear-gradient(45deg,#a18cd1,#6a5af9);">
+                        <div class="avatar">AC</div>
+                         
+                    </div>
+
+                    <div class="card-body">
+                        <h5>Alex Chen</h5>
+                        <p>Bestfrind</p>
+                        <p>(555) 234-8901</p>
+
+                        <div class="actions d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <button class="btn btn-sm btn-call me-2"><i class="fa-solid fa-phone"></i> Call</button>
+                                <button class="btn btn-sm btn-text"><i class="fa-solid fa-comment"></i> Text</button>
+                            </div>
+                            <div>
+                                <button class="icon-btn"><i class="fa-regular fa-star"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-pen"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-trash"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <div class="card-top" style="background: linear-gradient(45deg,#ff758c,#ff3e6c);">
+                        <div class="avatar">DW</div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5>Dr.Williom</h5>
+                        <p>Docter</p>
+                        <p>(555) 111-2233</p>
+
+                       <div class="actions d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <button class="btn btn-sm btn-call me-2"><i class="fa-solid fa-phone"></i> Call</button>
+                                <button class="btn btn-sm btn-text"><i class="fa-solid fa-comment"></i> Text</button>
+                            </div>
+                            <div>
+                                <button class="icon-btn"><i class="fa-regular fa-star"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-pen"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-trash"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card contact-card">
+                    <div class="card-top" style="background: linear-gradient(45deg,#36d1dc,#5b86e5);">
+                        <div class="avatar">JR</div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5>Taylor Brooks</h5>
+                        <p>Crooker</p>
+                        <p>(555) 445-6677</p>
+
+                       <div class="actions d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <button class="btn btn-sm btn-call me-2"><i class="fa-solid fa-phone"></i> Call</button>
+                                <button class="btn btn-sm btn-text"><i class="fa-solid fa-comment"></i> Text</button>
+                            </div>
+                            <div>
+                                <button class="icon-btn"><i class="fa-regular fa-star"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-pen"></i> </button>
+                                <button class="icon-btn"><i class="fa-solid fa-trash"></i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
