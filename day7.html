@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Distance Filter</title>
+
+<style>
+body {
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f3f2ef;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.top h3 {
+    margin: 0;
+}
+
+.reset {
+    color: gray;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.range-container {
+    margin: 20px 0;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
+    color: gray;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #0a66c2, #004182);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+    <div class="top">
+        <h3>Distance</h3>
+        <span class="reset" id="resetBtn">Reset</span>
+    </div>
+
+    <label>Kilometers</label>
+
+    <div class="range-container">
+        <input type="range" id="slider" min="0" max="5" step="1">
+        
+        <div class="steps">
+            <span>0</span>
+            <span>8</span>
+            <span>16</span>
+            <span>40</span>
+            <span>80</span>
+            <span>160</span>
+        </div>
+    </div>
+
+    <button id="resultBtn">Show 0 results</button>
+
+</div>
+
+<script>
+const slider = document.getElementById("slider");
+const button = document.getElementById("resultBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+ 
+const values = [0, 8, 16, 40, 80, 160];
+
+ 
+function updateValue() {
+    let index = slider.value;
+    let km = values[index];
+    let result = km * 4;  
+   button.innerText = "Show " + result + " results";
+}
+
+slider.addEventListener("input", updateValue);
+resetBtn.addEventListener("click", () => {
+    slider.value = 0;
+    button.innerText = "Show 0 results";
+});
+updateValue();
+</script>
+
+</body>
+</html>
